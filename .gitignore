@@ -1,0 +1,5 @@
+data/token.txt
+data/admins.txt
+src/__pycache__/
+venv
+.idea/

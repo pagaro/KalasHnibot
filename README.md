@@ -13,7 +13,7 @@ npm install
 ```
 3. Create a .env file and add the following variables
 ```bash
-TOKEN=MTE3NDI2ODU4NzcyMTEwOTUyNA.GiGqoX.C5dmNNypky6EGfT5F252I3h0HIpnqV4mZOdx3o
+TOKEN=YOUR_TOKEN
 ```
 4. Start the bot
 ```bash

@@ -10,11 +10,14 @@ intents.message_content = True
 bot = commands.Bot(command_prefix='/', intents=intents, help_command=None)
 
 # ID du channel spécifique où le bot fera l'écho
-channel_id = 123456789
+channel_id = 1049232463496495167
 
 
 @bot.event
 async def on_ready():
+    await bot.wait_until_ready()
+    message_channel = bot.get_channel(channel_id)
+    await message_channel.send(f'{bot.user} up')
     print(f'Connecté en tant que {bot.user}')
 
 
@@ -22,13 +25,12 @@ async def on_ready():
 async def on_message(message):
     # Vérifie si le message vient du channel spécifique et n'est pas du bot
     if message.channel.id == channel_id and message.author != bot.user:
-        await message.channel.send(message.content)
+        message_channel = bot.get_channel(channel_id)
+        await message_channel.send(message.content)
 
 
 async def main():
     async with bot:
-        await bot.load_extension('events')
-        await bot.load_extension('commands')
         await bot.start(token)
 
 

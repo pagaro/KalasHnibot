@@ -6,13 +6,16 @@ dotenv.config();
 
 const token = process.env.TOKEN;
 
-let intents = [
+const intents = [
 	GatewayIntentBits.GuildMembers,
 	GatewayIntentBits.GuildMessages,
-	GatewayIntentBits.Guilds
-]
+	GatewayIntentBits.Guilds,
+	GatewayIntentBits.MessageContent
+];
 
-const client = new Client({ intents:intents });
+
+const client = new Client({ intents: intents});
+
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));

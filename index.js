@@ -16,6 +16,7 @@ const intents = [
 
 const client = new Client({ intents: intents});
 
+
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 

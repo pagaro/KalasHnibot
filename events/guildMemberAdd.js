@@ -2,6 +2,8 @@
 module.exports = {
 	name: 'guildMemberAdd',
 	execute(client,member) {
-		console.log(`New member joined! ${member.user.tag}`);
+		let channel = member.guild.systemChannel;
+		if (!channel) return;
+		channel.send(`Heu par contre ${member.user.username} faut toquer avant !`);
 	},
 };  

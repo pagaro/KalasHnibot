@@ -1,7 +1,0 @@
-services:
-  bot:
-    container_name: KalasHnibot
-    build: .
-    volumes:
-      - ./src:/app/src
-      - ./data:/app/data

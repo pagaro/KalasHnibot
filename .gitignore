@@ -3,3 +3,4 @@ venv
 .idea/
 .env
 node_modules/
+dist/

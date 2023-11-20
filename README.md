@@ -17,5 +17,5 @@ TOKEN=YOUR_TOKEN
 ```
 4. Start the bot
 ```bash
-node index.js
+npm start
 ```

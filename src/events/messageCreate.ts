@@ -1,7 +1,6 @@
 import { Events, Message, EmbedBuilder   } from "discord.js"
 import { BotEvent } from "../../types"
 const event: BotEvent = {
-    async: undefined,
     name: Events.MessageCreate,
     execute: (message:Message) => {
         let content = message.content;

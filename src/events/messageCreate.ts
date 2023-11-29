@@ -17,7 +17,7 @@ const event: BotEvent = {
     }
 }
 const employeeTraitement = (message:Message) =>{
-    message.reply("ON DIT SALARIÉ BOUFON !")
+    message.reply("ON DIT SALARIÉ BOUFFON !")
 }
 
 const piedTraitement = (message:Message) =>{

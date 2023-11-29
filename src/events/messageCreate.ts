@@ -14,7 +14,17 @@ const event: BotEvent = {
 
         if (content.toLowerCase().includes('pas de pied'))
             piedTraitement(message);
+
+        if (content.toLowerCase().includes('ouais'))
+            ouaisTraitement(message);
     }
+}
+
+const ouaisTraitement = (message:Message) =>{
+    // 1 chance sur 10
+    let random = Math.floor(Math.random() * 10);
+    if (random == 0)
+        message.reply("ON DIT OUI GROS CON !")
 }
 const employeeTraitement = (message:Message) =>{
     message.reply("ON DIT SALARIÉ BOUFFON !")

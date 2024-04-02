@@ -14,8 +14,17 @@ const event: BotEvent = {
 
         if (content.toLowerCase().includes('pas de pied'))
             piedTraitement(message);
+
+        if (message.author.id == '332581253046075392')
+            younnTraitement(message);
     }
 }
+
+const younnTraitement = (message:Message) =>{
+
+    message.react(Math.random() < 0.5 ? "<:flop2:1181550549473177670>" : "<:flop:1180053151437566002>");
+}
+
 const employeeTraitement = (message:Message) =>{
     message.reply("ON DIT SALARIÉ BOUFFON !")
 }

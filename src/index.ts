@@ -8,6 +8,7 @@ dotenv.config();
 const intents = [
 	GatewayIntentBits.GuildMembers,
 	GatewayIntentBits.GuildMessages,
+	GatewayIntentBits.GuildMessageReactions,
 	GatewayIntentBits.Guilds,
 	GatewayIntentBits.MessageContent
 ];

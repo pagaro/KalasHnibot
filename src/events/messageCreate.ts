@@ -18,14 +18,9 @@ const event: BotEvent = {
         if (message.author.id == '332581253046075392')
             younnTraitement(message);
 
-        if (message.author.id == '379032082472763392')
-            bouvetteTraitement(message);
     }
 }
 
-const bouvetteTraitement = (message:Message) =>{
-    message.react("<:bavette:1222177109326434335>");
-}
 
 const younnTraitement = (message:Message) =>{
 

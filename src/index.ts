@@ -1,6 +1,5 @@
-#!/home/lucas/.nvm/versions/node/v20.5.0/bin/node
 import dotenv from 'dotenv';
-import { Client, Collection, GatewayIntentBits } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
 import { join } from 'path';
 import { readdirSync } from 'fs';
 

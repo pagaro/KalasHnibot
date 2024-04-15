@@ -23,8 +23,8 @@ const event: BotEvent = {
 
 
 const younnTraitement = (message:Message) =>{
-
-    message.react(Math.random() < 0.5 ? "<:flop2:1181550549473177670>" : "<:flop:1180053151437566002>");
+    if (Math.random() < 0.05)
+        message.react(Math.random() < 0.5 ? "<:flop2:1181550549473177670>" : "<:flop:1180053151437566002>");
 }
 
 const employeeTraitement = (message:Message) =>{

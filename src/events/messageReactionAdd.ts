@@ -1,4 +1,4 @@
-import { Events, Message, EmbedBuilder, MessageReaction, User, Client } from "discord.js";
+import {Events, Message, EmbedBuilder, MessageReaction, User, Client, TextChannel} from "discord.js";
 import { BotEvent } from "../../types";
 import emojis from "../data/emojis.json"
 const event: BotEvent = {
@@ -22,7 +22,7 @@ const event: BotEvent = {
                 let channel = message.message.channel;
                 // guildMember.kick("Pas d'émotes, pas le droit d'utiliser d'émotes")
                 console.log("kick")
-                await channel.send("Sir bouvette ne souhaitant pas avoir d'émojis à son nom, il n'a pas le droit d'en utiliser. Il a par conséquent été kick du serveur.")
+                await (channel as TextChannel).send("Sir bouvette ne souhaitant pas avoir d'émojis à son nom, il n'a pas le droit d'en utiliser. Il a par conséquent été kick du serveur.")
             }
             
             

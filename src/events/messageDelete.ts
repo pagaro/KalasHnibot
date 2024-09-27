@@ -1,4 +1,4 @@
-import {Embed, EmbedBuilder, Events, Message} from "discord.js";
+import { EmbedBuilder, Events, Message, TextChannel} from "discord.js";
 import {BotEvent} from "../../types";
 
 const event: BotEvent = {
@@ -23,8 +23,8 @@ const bouvetteTraitement = (message: Message) => {
         if (message.attachments.size > 0) {
             exampleEmbed.setImage(message.attachments.first().url);
         }
-
-        message.channel.send({ embeds: [exampleEmbed] });
+        let channel = message.channel;
+        (channel as TextChannel).send({ embeds: [exampleEmbed] });
     }catch (e){
         console.log(e)
     }

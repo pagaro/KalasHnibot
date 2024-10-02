@@ -42,6 +42,6 @@ const lewiwiTraitement = (message: Message) => {
   } catch (e) {
     console.log(e);
   }
-};
+}; 
 
 export default event;

@@ -1,4 +1,4 @@
-import { Embed, EmbedBuilder, Events, Message } from "discord.js";
+import {Embed, EmbedBuilder, Events, Message, TextChannel} from "discord.js";
 import { BotEvent } from "../../types";
 
 const event: BotEvent = {
@@ -21,7 +21,8 @@ const bouvetteTraitement = (message: Message) => {
       exampleEmbed.setImage(message.attachments.first().url);
     }
 
-    message.channel.send({ embeds: [exampleEmbed] });
+    let channel = message.channel;
+    (channel as TextChannel).send({ embeds: [exampleEmbed] });
   } catch (e) {
     console.log(e);
   }
@@ -38,7 +39,8 @@ const lewiwiTraitement = (message: Message) => {
       exampleEmbed.setImage(message.attachments.first().url);
     }
 
-    message.channel.send({ embeds: [exampleEmbed] });
+    let channel = message.channel;
+    (channel as TextChannel).send({ embeds: [exampleEmbed] });
   } catch (e) {
     console.log(e);
   }

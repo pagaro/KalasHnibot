@@ -8,6 +8,7 @@ const event: BotEvent = {
 
     if (message.author.id == "379032082472763392") bouvetteTraitement(message);
     if (message.author.id == "1177183427443822593") lewiwiTraitement(message);
+    if (message.author.id == "332581253046075392") youn(message);
   },
 };
 
@@ -15,6 +16,23 @@ const bouvetteTraitement = (message: Message) => {
   try {
     const exampleEmbed = new EmbedBuilder()
       .setTitle("Sir Bouvette a supprimé le message suivant")
+      .setDescription(message.content);
+
+    if (message.attachments.size > 0) {
+      exampleEmbed.setImage(message.attachments.first().url);
+    }
+
+    let channel = message.channel;
+    (channel as TextChannel).send({ embeds: [exampleEmbed] });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const youn = (message: Message) => {
+  try {
+    const exampleEmbed = new EmbedBuilder()
+      .setTitle("youn a supprimé le message suivant")
       .setDescription(message.content);
 
     if (message.attachments.size > 0) {

@@ -1,11 +1,10 @@
 {
-    "compilerOptions": {
-      "target": "ES2016",
-      "module": "CommonJS",
-      "esModuleInterop": true,
-      "skipDefaultLibCheck": true,
-      "skipLibCheck": true,
-      "outDir": "./dist",
-      "resolveJsonModule": true,
-    }
-  }
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "types": ["./types.d.ts"] // Ensure TypeScript loads your types
+  },
+  "include": ["src", "types.d.ts"]
+}

@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "tsc && node dist/index.js"
-  },
-  "author": "",
+  "type": "module",
   "license": "ISC",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "commands": "bun run src/deploy-commands.ts"
+  },
   "dependencies": {
     "discord.js": "^14.14.1",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.7",
     "fs": "^0.0.1-security"
   },
   "devDependencies": {

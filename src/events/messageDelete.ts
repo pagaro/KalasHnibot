@@ -1,4 +1,4 @@
-import {Embed, EmbedBuilder, Events, Message, TextChannel} from "discord.js";
+import { Embed, EmbedBuilder, Events, Message, TextChannel } from "discord.js";
 import { BotEvent } from "../../types";
 
 const event: BotEvent = {
@@ -19,7 +19,7 @@ const bouvetteTraitement = (message: Message) => {
       .setDescription(message.content);
 
     if (message.attachments.size > 0) {
-      exampleEmbed.setImage(message.attachments.first().url);
+      exampleEmbed.setImage(message.attachments.first()!.url);
     }
 
     let channel = message.channel;
@@ -36,7 +36,7 @@ const youn = (message: Message) => {
       .setDescription(message.content);
 
     if (message.attachments.size > 0) {
-      exampleEmbed.setImage(message.attachments.first().url);
+      exampleEmbed.setImage(message.attachments.first()!.url);
     }
 
     let channel = message.channel;
@@ -54,7 +54,7 @@ const lewiwiTraitement = (message: Message) => {
       .setFooter({ text: " Tu ferais mieux d'aller à la salle à la place" });
 
     if (message.attachments.size > 0) {
-      exampleEmbed.setImage(message.attachments.first().url);
+      exampleEmbed.setImage(message.attachments.first()!.url);
     }
 
     let channel = message.channel;
@@ -62,6 +62,6 @@ const lewiwiTraitement = (message: Message) => {
   } catch (e) {
     console.log(e);
   }
-}; 
+};
 
 export default event;
